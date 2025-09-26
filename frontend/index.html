@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Credit Underwriting</title>
+  <link rel="stylesheet" href="/frontend/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Credit Underwriting</h1>
+    <div class="auth">
+      <h2>Auth</h2>
+      <input id="regEmail" placeholder="Email" />
+      <input id="regPwd" placeholder="Password" type="password" />
+      <label><input id="regAdmin" type="checkbox" /> Admin</label>
+      <button id="btnRegister">Register</button>
+      <hr/>
+      <input id="loginEmail" placeholder="Email" />
+      <input id="loginPwd" placeholder="Password" type="password" />
+      <button id="btnLogin">Login</button>
+    </div>
+
+    <div class="app" style="display:none;">
+      <h2>Application</h2>
+      <input id="applicantName" placeholder="Applicant Name" />
+      <input id="applicantDob" placeholder="DOB (YYYY-MM-DD)" />
+      <input id="aadhaarNumber" placeholder="Aadhaar Number" />
+      <button id="btnCreateApp">Create Application</button>
+      <div id="appInfo"></div>
+
+      <h3>Upload Documents</h3>
+      <select id="docType">
+        <option value="aadhaar">Aadhaar</option>
+        <option value="salary_slip">Salary Slip</option>
+      </select>
+      <input id="fileInput" type="file" />
+      <button id="btnUpload">Upload</button>
+      <pre id="uploadResult"></pre>
+
+      <h3>Training (Admin)</h3>
+      <input id="datasetSlug" placeholder="Kaggle dataset slug (optional)" />
+      <input id="targetColumn" placeholder="Target column (e.g. Loan_Status)" />
+      <button id="btnStartTrain">Start Training</button>
+      <div class="progress"><div id="trainBar"></div></div>
+      <pre id="trainLogs"></pre>
+
+      <h3>Predict</h3>
+      <button id="btnPredict">Predict using Best Model</button>
+      <pre id="predictOut"></pre>
+
+      <h3>Report</h3>
+      <button id="btnReport">Download PDF Report</button>
+
+      <h3>Voice Chatbot</h3>
+      <div class="chat">
+        <button id="btnSpeak">🎤 Speak</button>
+        <input id="chatInput" placeholder="Ask about loan, docs..." />
+        <button id="btnSend">Send</button>
+        <div id="chatLog"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/frontend/script.js"></script>
+</body>
+<style>
+  .progress { width: 100%; height: 12px; background: #eee; border-radius: 6px; }
+  #trainBar { height: 12px; width: 0; background: #4caf50; border-radius: 6px; }
+</style>
+</html>

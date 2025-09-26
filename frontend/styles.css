@@ -1,0 +1,9 @@
+body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 0; background: #f8fafc; }
+.container { max-width: 900px; margin: 20px auto; padding: 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+h1 { margin-top: 0; }
+input, select, button { padding: 8px 10px; margin: 6px 4px; }
+button { background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+button:hover { opacity: 0.95; }
+pre { background: #0b1020; color: #e5e7eb; padding: 8px; border-radius: 6px; overflow: auto; }
+.chat { border: 1px solid #e5e7eb; padding: 8px; border-radius: 8px; }
+#chatLog { margin-top: 8px; max-height: 200px; overflow: auto; background: #f3f4f6; padding: 8px; border-radius: 6px; }
